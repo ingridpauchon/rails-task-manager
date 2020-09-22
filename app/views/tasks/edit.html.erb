@@ -1,4 +1,4 @@
-<%= form_for @task do |f| %>
+<%= simple_form_for(@task) do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title, placeholder: 'Type a title' %>
 <%= f.label :details %>
@@ -7,3 +7,5 @@
 <%= f.check_box :completed, {}, true, false %>
 <%= f.submit 'save task' %>
 <% end %>
+
+<%= link_to 'back to all tasks', tasks_path %>
